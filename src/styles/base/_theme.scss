@@ -1,0 +1,69 @@
+.key-wrapper,
+header {
+    background-color: $blue;
+}
+
+.key {
+    background-color: $light-grey;
+
+    &:active {
+        background-color: $bright-yellow;
+    }
+}
+
+.help,
+.memory {
+    background-color: $blue;
+    color: $white;
+
+    &:active {
+        color: $bright-yellow;
+    }
+}
+
+
+.clear,
+.evaluate {
+    background-color: $blue;
+    border: 0;
+    color: $white;
+    padding: .7em;
+}
+
+.delete {
+    @extend .clear;
+    background-color: $light-grey;
+    color: $dark-grey;
+}
+
+.header-input::-webkit-input-placeholder {
+    color: $white;
+}
+
+.header-input::-moz-placeholder {
+    color: $white;
+}
+
+.header-input:-ms-input-placeholder {
+    color: $white;
+}
+
+.header-input:-moz-placeholder {
+    color: $white;
+}
+
+.tag::-webkit-input-placeholder {
+    color: darken($light-grey, 30%);
+}
+
+.tag::-moz-placeholder {
+    color: darken($light-grey, 30%);
+}
+
+.tag:-ms-input-placeholder {
+    color: darken($light-grey, 30%);
+}
+
+.tag:-moz-placeholder {
+    color: darken($light-grey, 30%);
+}

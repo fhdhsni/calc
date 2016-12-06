@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="a simple calculator that works offline">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Calculator icon by NOPIXEL from the Noun Project -->
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="assets/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+        <link rel="manifest" href="assets/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="assets/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.8.0/math.min.js"></script> -->
+        <!-- <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+             <link rel="icon" href="assets/favicon.ico" type="image/x-icon"> -->
+        <title>Calculator</title>
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p>You are using an <strong style="color: red">outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header>
+            <button class="help">help</button>
+            <input type="text" class="header-input" placeholder="filter by #tag"/>
+            <button class="memory">in memory</button>
+        </header>
+        <main>
+            <div class="result-wrapper">
+                <article class="result">
+                    <input class="tag" type="text" placeholder="tag"/>
+                    <article class="math-expression">sqrt(9) = 3</article>
+                    <button class="delete">remove</button>
+                </article>            
+            </div>
+
+            <div class="input-wrapper">
+                <button class="clear">clear</button>
+                <input class="input" type="text" />
+                <button class="evaluate">evaluate</button>
+            </div>
+        </main>
+        <div class="key-wrapper">
+            <button class="toggle-keys">hide keys</button>
+            <div class="key-container">
+                <div class="left-keys">
+                    <button class="key same-text">temperature</button>
+                    <button class="key" id="left-arrow">&larr;</button>
+                    <button class="key same-text">mass</button>
+                    <button class="key same-text">.</button>
+                    <button class="key same-text">length</button>
+                    <button class="key" id="random">random</button>
+                    <button class="key same-text">volume</button>
+                    <button class="key same-text">pi</button>
+                </div>
+                <div class="middle-keys">
+                    <button class="key same-text bigger">1</button>
+                    <button class="key same-text bigger">2</button>
+                    <button class="key same-text bigger">3</button>
+                    <button class="key same-text bigger">+</button>
+                    <button class="key same-text">4</button>
+                    <button class="key same-text">5</button>
+                    <button class="key same-text">6</button>
+                    <button class="key" id="minus">&#8722;</button>
+                    <button class="key same-text">7</button>
+                    <button class="key same-text">8</button>
+                    <button class="key same-text">9</button>
+                    <button class="key" id="multiplication">×</button>
+                    <button class="key same-text">0</button>
+                    <button class="key same-text">(</button>
+                    <button class="key same-text">)</button>
+                    <button class="key same-text">/</button>
+                </div>
+                <div class="right-keys">
+                    <button class="key same-text">sqrt</button>
+                    <button class="key same-text tooltip" data-tooltip="e.g.  sin(90 deg)">sin</button>
+                    <button class="key same-text">help</button>
+                    <button class="key same-text">log</button>
+                    <button class="key same-text tooltip" data-tooltip="e.g.  cos(90 deg)">cos</button>
+                    <button class="key same-text">gcd</button>
+                    <button class="key same-text">^</button>
+                    <button class="key same-text">tan</button>
+                    <button class="key same-text">lcm</button>
+                    <button class="key nth-root">nthRoot</button>
+                    <button class="key same-text">cot</button>
+                    <button class="key same-text">cube</button>
+                </div>
+            </div>
+        </div>
+        <div class="help-wrapper">
+            <dl class="math-help">
+                <dt class="name-dt">name</dt>
+                <dd class="name">sin</dd>
+                
+                <dt class="category-dt">category</dt>
+                <dd class="category">Trigonometry</dd>
+
+                <dt class="syntax-dt">syntax</dt>
+                <!-- <dd class="syntax">sin(x)</dd> -->
+                
+                <dt class="description-dt">description</dt>
+                <dd class="description">Compute the sine of x in radians.</dd>
+                
+                <dt class="examples-dt">examples</dt>
+                <!-- <dd>sin(2)</dd>
+                     <dd>sin(pi / 4) ^ 2</dd>
+                     <dd>sin(90 deg)</dd>
+                     <dd>sin(30 deg)</dd>
+                     <dd>sin(0.2)^2 + cos(0.2)^2</dd> -->
+            </dl>
+        </div>
+    </body>
+</html>

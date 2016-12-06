@@ -1,0 +1,12 @@
+body {
+    @include ms-respond(font-size, 1);
+    font-family: Ubuntu;
+}
+
+.nth-root {
+    background-image: url("o2.svg");
+    background-repeat: no-repeat;
+    background-position: 60% 50%;
+    overflow: hidden;
+    text-indent: -9999px;
+}

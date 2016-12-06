@@ -1,0 +1,20 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header-input {
+    background-color: $blue;
+    border: 0;
+    color: $white;
+    text-align: center;
+    width: 50%;
+}
+
+
+.help,
+.memory {
+    border: 0;
+    padding: 1em 2em;
+}

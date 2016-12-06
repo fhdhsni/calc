@@ -1,0 +1,63 @@
+.result-wrapper {
+    color: $dark-grey;
+    display: flex;
+    flex: 1 1 85%;
+    flex-direction: column;
+    margin-bottom: 1em;
+    margin-top: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .result {
+        display: flex;
+        flex: 0 0 15%;
+        justify-content: space-between;
+        margin-bottom: .5em;
+        margin-top: .5em;
+        transition: transform .3s;
+        width: 100%;
+    }
+
+    &.on-hidden-keys {
+        .result {
+            flex: 0 0 15%;
+        }
+    }
+
+    input {
+        background-color: $light-grey;
+        border: 0;
+        color: $dark-grey;
+        text-align: center;
+    }
+
+    .result-hidden {            // used to filter results based on their tags
+        display: none;
+    }
+}
+
+.math-expression {
+    background-color: $light-grey;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.delete,
+.tag {
+    width: $width-of-keys-in-main-small;
+
+    @media (max-width: $small-breakpoint) {
+        width: $width-of-keys-in-main-larg;
+    }
+}
+
+.delete {
+    padding: 0;
+}
+
+.translate {
+    transform: translateX(-100em);
+}

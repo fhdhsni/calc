@@ -1,0 +1,31 @@
+.input-wrapper {
+    border: 2px solid $bright-yellow;
+    display: flex;
+    flex: 1 1 15%;
+    margin-bottom: 1em;
+
+    // &.on-hidden-keys {
+    //     flex: 1 1 10%;
+    // }
+}
+
+.input {
+    background-color: $light-grey;
+    border: 0;
+    text-align: center;
+    width: $larg-width;
+}
+
+.clear,
+.evaluate {
+    width: $width-of-keys-in-main-small;
+
+    @media (max-width: $small-breakpoint) {
+        width: $width-of-keys-in-main-larg;
+    }
+
+    &:active {
+        background-color: $bright-yellow;
+        color: $dark-grey;
+    }
+}

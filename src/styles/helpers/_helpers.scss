@@ -1,0 +1,10 @@
+%key-sections {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 0 .5em;
+    width: 33.3333%;
+
+    @media (max-width: $small-breakpoint) {
+        width: 49%;
+    }
+}

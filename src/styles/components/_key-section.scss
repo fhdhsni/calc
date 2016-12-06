@@ -1,0 +1,88 @@
+.key-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform .3s;
+    width: 100%;
+}
+
+.key-container {
+    display: flex;
+    justify-content: space-between;
+    width: $small-width;
+
+    @media (max-width: $small-breakpoint) {
+        justify-content: space-around;
+    }
+
+    @media (min-width: $medium-breakpoint) and (max-width: $larg-breakpoint - 1){
+        width: $medium-width;
+    }
+
+    @media (min-width: $larg-breakpoint) {
+        width: $larg-width;
+    }
+}
+
+.right-keys {
+    @extend %key-sections;
+
+    .key {
+        width: 33.33333%;
+    }
+}
+
+.middle-keys {
+    @extend %key-sections;
+
+    @media (max-width: $small-breakpoint) {
+        order: 1;
+    }
+
+    .key {
+        width: 25%;
+    }
+}
+
+.left-keys {
+    @extend %key-sections;
+
+    .key {
+        &:nth-child(odd) {
+            width: 75%;
+        }
+
+        &:nth-child(even) {
+            width: 25%;
+        }
+    }
+
+    @media (max-width: $small-breakpoint) {
+        display: none;
+    }
+}
+
+.key {
+    border: .1em $blue solid;
+    padding: 1em;
+}
+
+.display-none {
+    display: none;
+}
+
+.toggle-keys {
+    background-color: $blue;
+    border: 0;
+    color: $white;
+    padding: 1em;
+
+    &:active {
+        color: $bright-yellow;
+    }
+}
+
+#random {
+    font-size: .8em;
+}

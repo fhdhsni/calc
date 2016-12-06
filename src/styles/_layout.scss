@@ -1,0 +1,23 @@
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: $small-width;
+
+    @media (min-width: $medium-breakpoint) and (max-width: $larg-breakpoint - 1){
+        width: $medium-width;
+    }
+
+    @media (min-width: $larg-breakpoint) {
+        width: $larg-width;
+    }
+}
