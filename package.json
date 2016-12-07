@@ -11,7 +11,8 @@
     "k:start": "karma start",
     "k:run": "karma run",
     "k:stop": "karma start",
-    "mocha": "mocha"
+    "mocha": "mocha",
+    "flow": "flow; test $? -eq 0 -o $? -eq 2"
   },
   "author": "Farhad hsni <farhad.hsni@gmail.com>",
   "license": "MIT",
