@@ -1,9 +1,9 @@
 .input-wrapper {
     border: 2px solid $bright-yellow;
     display: flex;
-    flex: 1 1 15%;
+    flex: 1 1 10%;
     margin-bottom: 1em;
-
+    min-height: 3em;
     // &.on-hidden-keys {
     //     flex: 1 1 10%;
     // }

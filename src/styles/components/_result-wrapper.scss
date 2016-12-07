@@ -1,7 +1,7 @@
 .result-wrapper {
     color: $dark-grey;
     display: flex;
-    flex: 1 1 85%;
+    flex: 1 1 90%;
     flex-direction: column;
     margin-bottom: 1em;
     margin-top: auto;
@@ -14,6 +14,7 @@
         justify-content: space-between;
         margin-bottom: .5em;
         margin-top: .5em;
+        min-height: 3em;
         transition: transform .3s;
         width: 100%;
     }
