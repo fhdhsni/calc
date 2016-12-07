@@ -1,14 +1,10 @@
-export default function exitHelp(mathHelp, evalKey, helpWrapper) {
+export default function closeHelp(mathHelp, evalKey, helpWrapper) {
   function closeHelpElement(evt) {
-    console.log(evt.target);
     if (evt.target !== mathHelp && evt.target !== evalKey) {
       const syntaxNodes = document.querySelectorAll(".syntax");
       const examplesNode = document.querySelectorAll(".examples");
 
-      console.log("here none display");
-      /* eslint-disable */
       helpWrapper.classList.remove("on-help");
-      /* eslint-enable */
       document.removeEventListener("click", closeHelpElement);
 
       for (let i = 0; i < syntaxNodes.length; i += 1) {
