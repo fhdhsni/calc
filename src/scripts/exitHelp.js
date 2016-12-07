@@ -1,17 +1,16 @@
 export default function exitHelp(mathHelp, evalKey, helpWrapper) {
-  const closeHelpElement = (evt) => {
+  function closeHelpElement(evt) {
     console.log(evt.target);
-    console.log(mathHelp.style.display);
-    if (mathHelp.style.display === "block" && evt.target !== mathHelp && evt.target !== evalKey) {
+    if (evt.target !== mathHelp && evt.target !== evalKey) {
       const syntaxNodes = document.querySelectorAll(".syntax");
       const examplesNode = document.querySelectorAll(".examples");
 
       console.log("here none display");
       /* eslint-disable */
-      mathHelp.style.display = "none";
-      helpWrapper.classList.toggle("on-help");
+      helpWrapper.classList.remove("on-help");
       /* eslint-enable */
       document.removeEventListener("click", closeHelpElement);
+
       for (let i = 0; i < syntaxNodes.length; i += 1) {
         syntaxNodes[i].parentNode.removeChild(syntaxNodes[i]);
       }
@@ -20,7 +19,7 @@ export default function exitHelp(mathHelp, evalKey, helpWrapper) {
         examplesNode[i].parentNode.removeChild(examplesNode[i]);
       }
     }
-  };
+  }
 
   document.addEventListener("click", closeHelpElement);
 }

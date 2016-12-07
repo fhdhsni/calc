@@ -72,8 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const result = math.eval(mathExpression);
 
         showHelp(result.doc);
-        mathHelp.style.display = "block";
-        helpWrapper.classList.toggle("on-help");
+        // mathHelp.style.display = "block";
+        helpWrapper.classList.add("on-help");
         exitHelp(mathHelp, evalKey, helpWrapper);
       }
     }
