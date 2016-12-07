@@ -4,6 +4,7 @@ import closeHelp from "./closeHelp";
 import math from "./math.min";
 import buildResult from "./buildlResultElement";
 import format from "./format";
+import evt from "./buildCustomEvent";
 
 export default function evalKeyFunction(evalKey, input, resultWrapper, helpWrapper, mathHelp) {
   evalKey.addEventListener("click", () => {
@@ -13,9 +14,8 @@ export default function evalKeyFunction(evalKey, input, resultWrapper, helpWrapp
       if (mathExpression.search(/help/) === -1) {
         const result = format(math.format, math.eval(mathExpression));
 
-        buildResult(mathExpression, result);
-        resultWrapper.scrollTop = resultWrapper.scrollHeight;
-        resultWrapper.lastChild.classList.remove("translate"); // kickoff slide animation
+        buildResult(mathExpression, result, resultWrapper);
+        document.dispatchEvent(evt);
       } else {
         const result = math.eval(mathExpression);
 

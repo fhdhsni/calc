@@ -3,6 +3,7 @@ import addEventsForSameContentKeys from "./addEventsForSameContentKeys";
 import evalKeyFunction from "./evalKeyFunction";
 import removeButton from "./removeButton";
 import toggleKeyEvent from "./toggleKeyEvent";
+import { useStorage } from "./storage";
 import "../styles/main.scss";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -41,11 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
     input.value = "";
   });
 
+  useStorage();
   addEventsForSameContentKeys(input, ...sameText);
   evalKeyFunction(evalKey, input, resultWrapper, helpWrapper, mathHelp);
   removeButton(resultWrapper);
   toggleKeyEvent(toggleKeys, resultWrapper, keyContainer);
-
   (function filter() {
     filterInput.addEventListener("keyup", () => {
       const allResults = resultWrapper.querySelectorAll(".result");
