@@ -5,6 +5,7 @@ import removeButton from "./removeButton";
 import toggleKeyEvent from "./toggleKeyEvent";
 import { useStorage } from "./storage";
 import filterByTag from "./filterByTag";
+import tooltip from "./tooltip";
 import "../styles/main.scss";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -49,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
   removeButton(resultWrapper);
   toggleKeyEvent(toggleKeys, resultWrapper, keyContainer);
   filterByTag(filterInput);
-
+  tooltip();
   // making input respond to Enter key (doesn't on IE though)
   input.addEventListener("keyup", (evt) => {
     if (evt.key !== undefined) {

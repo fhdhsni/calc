@@ -1,23 +1,21 @@
-.tooltip{
+.tooltip {
     display: inline;
     position: relative;
 }
 
-.tooltip:hover:after{
-    background: #333;
+.tooltip:hover:after {
     background: rgba(0,0,0,.8);
-    border-radius: 5px;
     color: #fff;
     content: attr(data-tooltip);
     bottom: 80%;
     left: 20%;
-    padding: 5px 15px;
+    padding: .5em;
     position: absolute;
     z-index: 98;
     width: 10em;
 }
 
-.tooltip:hover:before{
+.tooltip:hover:before {
     border: solid;
     border-color: #333 transparent;
     border-width: 6px 6px 0 6px;
