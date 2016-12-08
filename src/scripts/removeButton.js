@@ -1,3 +1,5 @@
+import { setStorage } from "./storage";
+
 export default function (resultWrapper) {
   // removing .result when '.delete' is clicked;
   // using .resultWrapper instead of adding event listener to every single .delete button
@@ -8,6 +10,7 @@ export default function (resultWrapper) {
       toBeRemoved.classList.add("translate"); // translate animation
       setTimeout(() => {         // making enough time for translate animation
         this.removeChild(toBeRemoved);
+        setStorage();
       }, 300);
     }
   });

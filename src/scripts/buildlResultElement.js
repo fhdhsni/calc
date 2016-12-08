@@ -1,8 +1,10 @@
 /* eslint max-len: off */
 /* eslint no-param-reassign: ["error", { "props": false }]*/
+import { setStorage } from "./storage";
 
-// export default function (mathExpression, resultValue = "", resultWrapper = document.querySelector(".result-wrapper"), tag = "") {
-export default function (mathExpression, { resultValue = "", resultWrapper = document.querySelector(".result-wrapper"), tag = "" } = {}) {
+export default function build(
+  mathExpression,
+  { resultValue = "", resultWrapper = document.querySelector(".result-wrapper"), tag = "" } = {}) {
   const div = document.createElement("div");
   const docFrag = document.createDocumentFragment();
 
@@ -16,7 +18,10 @@ export default function (mathExpression, { resultValue = "", resultWrapper = doc
   }
 
   docFrag.querySelector("div").innerHTML = markup;
-
+  docFrag.querySelector("input").addEventListener("change", () => {
+    // to respect tag value while storing user history
+    setStorage();
+  });
   resultWrapper.appendChild(docFrag.querySelector("div").firstChild);
   resultWrapper.scrollTop = resultWrapper.scrollHeight;
   resultWrapper.lastChild.classList.remove("translate"); // kickoff slide animation

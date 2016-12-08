@@ -4,6 +4,7 @@ import evalKeyFunction from "./evalKeyFunction";
 import removeButton from "./removeButton";
 import toggleKeyEvent from "./toggleKeyEvent";
 import { useStorage } from "./storage";
+import filterByTag from "./filterByTag";
 import "../styles/main.scss";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -47,22 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   evalKeyFunction(evalKey, input, resultWrapper, helpWrapper, mathHelp);
   removeButton(resultWrapper);
   toggleKeyEvent(toggleKeys, resultWrapper, keyContainer);
-  (function filter() {
-    filterInput.addEventListener("keyup", () => {
-      const allResults = resultWrapper.querySelectorAll(".result");
-
-      for (let i = 0; i < allResults.length; i += 1) {
-        const result = allResults[i];
-        const tag = result.querySelector("input");
-
-        if (tag.value.toLowerCase().search(filterInput.value.toLowerCase()) === -1) {
-          result.classList.add("result-hidden");
-        } else {
-          result.classList.remove("result-hidden");
-        }
-      }
-    });
-  }());
+  filterByTag(filterInput);
 
   // making input respond to Enter key (doesn't on IE though)
   input.addEventListener("keyup", (evt) => {
