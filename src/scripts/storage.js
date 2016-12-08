@@ -1,14 +1,13 @@
-import buildResult from "./buildlResultElement";
+import buidlResultElement from "./buildlResultElement";
 
 export function useStorage() {
   if (localStorage.getItem("userCalcHistory")) {
-    console.log("yep there is some stuff");
     console.log(localStorage);
     const userHistoryArray = JSON.parse(localStorage.userCalcHistory);
 
 
     for (let i = 0; i < userHistoryArray.length; i += 1) {
-      buildResult(userHistoryArray[i].mathExpression,
+      buidlResultElement(userHistoryArray[i].mathExpression,
                   undefined,
                   undefined,
                   userHistoryArray[i].tag);
