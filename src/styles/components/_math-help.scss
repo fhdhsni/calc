@@ -3,11 +3,25 @@
     border: 2px solid $bright-yellow;
     color: $white;
     left: 50%;
-    padding: 1em;
+    padding: 2em;
     position: absolute;
     top: 20%;
     transform: translateX(-50%);
     z-index: 3;
+
+    ::selection {
+        background-color: $dark-grey;
+        color: $white;
+    }
+
+    dt:not(:first-child) {
+        margin-top: 1em;
+    }
+
+    dd {
+        margin-bottom: .4em;
+        margin-top: .4em;
+    }
 }
 
 .help-wrapper {

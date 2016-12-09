@@ -1,6 +1,15 @@
+  /* eslint-disable no-param-reassign */
 export default function closeHelp(mathHelp, evalKey, helpWrapper) {
   function closeHelpElement(evt) {
-    if (evt.target !== mathHelp && evt.target !== evalKey) {
+    let condition = true;
+
+    if (evt.type === "click") {
+      condition = evt.target !== mathHelp &&
+        evt.target !== evalKey &&
+        evt.target.parentNode !== mathHelp;
+    }
+
+    if (condition) {
       const syntaxNodes = document.querySelectorAll(".syntax");
       const examplesNode = document.querySelectorAll(".examples");
 
@@ -17,5 +26,8 @@ export default function closeHelp(mathHelp, evalKey, helpWrapper) {
     }
   }
 
-  document.addEventListener("click", closeHelpElement);
+  helpWrapper.tabIndex = "-1";  // to make it focusable
+  helpWrapper.focus();
+  helpWrapper.addEventListener("click", closeHelpElement);
+  helpWrapper.addEventListener("keypress", closeHelpElement);
 }
