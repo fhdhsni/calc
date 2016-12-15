@@ -1,3 +1,4 @@
+/* eslint-disable no-debugger, no-restricted-syntax */
 import concatToValue from "./concatToValue";
 import addEventsForSameContentKeys from "./addEventsForSameContentKeys";
 import evalKeyFunction from "./evalKeyFunction";
@@ -9,58 +10,67 @@ import tooltip from "./tooltip";
 import "../styles/main.scss";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const input = document.querySelector(".input");
-  const sameText = document.querySelectorAll(".same-text");
-  const evalKey = document.querySelector(".evaluate");
-  const clearKey = document.querySelector(".clear");
-  const resultWrapper = document.querySelector(".result-wrapper");
-  const toggleKeys = document.querySelector(".toggle-keys");
-  const keyContainer = document.querySelector(".key-container");
-  const filterInput = document.querySelector(".header-input");
-  const multiplication = document.getElementById("multiplication");
-  const minus = document.getElementById("minus");
-  const nthRoot = document.querySelector(".nth-root");
-  const random = document.getElementById("random");
-  const mathHelp = document.querySelector(".math-help");
-  const helpWrapper = document.querySelector(".help-wrapper");
+  class App {
+    constructor() {
+      this.input = document.querySelector(".input");
+      this.sameText = document.querySelectorAll(".same-text");
+      this.evalKey = document.querySelector(".evaluate");
+      this.clearKey = document.querySelector(".clear");
+      this.resultWrapper = document.querySelector(".result-wrapper");
+      this.toggleKeys = document.querySelector(".toggle-keys");
+      this.keyContainer = document.querySelector(".key-container");
+      this.filterInput = document.querySelector(".header-input");
+      this.multiplication = document.getElementById("multiplication");
+      this.minus = document.getElementById("minus");
+      this.nthRoot = document.querySelector(".nth-root");
+      this.random = document.getElementById("random");
+      this.mathHelp = document.querySelector(".math-help");
+      this.helpWrapper = document.querySelector(".help-wrapper");
+      this.inputWrapper = document.querySelector(".input-wrapper");
 
-  multiplication.addEventListener("click", () => {
-    concatToValue(input, "*");
-  });
+      useStorage.call(this);
+      addEventsForSameContentKeys.call(this);
+      evalKeyFunction.call(this);
+      removeButton.call(this);
+      toggleKeyEvent.call(this);
+      filterByTag.call(this);
+      tooltip.call(this);
 
-  minus.addEventListener("click", () => {
-    concatToValue(input, "-");
-  });
+      this.multiplication.addEventListener("click", () => {
+        concatToValue(this.input, "*");
+      });
 
-  nthRoot.addEventListener("click", () => {
-    concatToValue(input, "nthRoot");
-  });
+      this.minus.addEventListener("click", () => {
+        concatToValue(this.input, "-");
+      });
 
-  random.addEventListener("click", () => {
-    concatToValue(input, "random()");
-  });
+      this.nthRoot.addEventListener("click", () => {
+        concatToValue(this.input, "nthRoot");
+      });
 
-  clearKey.addEventListener("click", () => {
-    input.value = "";
-  });
+      this.random.addEventListener("click", () => {
+        concatToValue(this.input, "random()");
+      });
 
-  useStorage();
-  addEventsForSameContentKeys(input, ...sameText);
-  evalKeyFunction(evalKey, input, resultWrapper, helpWrapper, mathHelp);
-  removeButton(resultWrapper);
-  toggleKeyEvent(toggleKeys, resultWrapper, keyContainer);
-  filterByTag(filterInput);
-  tooltip();
-  // making input respond to Enter key (doesn't on IE though)
-  input.addEventListener("keyup", (evt) => {
-    if (evt.key !== undefined) {
-      if (evt.key === "Enter") {
-        evt.preventDefault();
-        evalKey.click();
-      }
-    } else if (evt.keyCode === 13) {
-      evt.preventDefault();
-      evalKey.click();
+      this.clearKey.addEventListener("click", () => {
+        this.input.value = "";
+      });
+
+
+      // making input respond to Enter key (doesn't on IE though)
+      this.input.addEventListener("keyup", (evt) => {
+        if (evt.key !== undefined) {
+          if (evt.key === "Enter") {
+            evt.preventDefault();
+            this.evalKey.click();
+          }
+        } else if (evt.keyCode === 13) {
+          evt.preventDefault();
+          this.evalKey.click();
+        }
+      });
     }
-  });
+  }
+  /* eslint-disable no-new */
+  new App();
 });

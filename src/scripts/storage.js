@@ -5,7 +5,9 @@ export function useStorage() {
     const userHistoryArray = JSON.parse(localStorage.userCalcHistory);
 
     for (let i = 0; i < userHistoryArray.length; i += 1) {
-      buildlResultElement(userHistoryArray[i].mathExpression, { tag: userHistoryArray[i].tag });
+      buildlResultElement.call(this,
+                               userHistoryArray[i].mathExpression,
+                               { tag: userHistoryArray[i].tag });
     }
   }
 }

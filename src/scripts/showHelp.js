@@ -1,4 +1,4 @@
-export default function showhelp(helpObj) {
+export default function showHelp(helpObj) {
   const syntaxDT = document.querySelector(".syntax-dt");
   const examplesDT = document.querySelector(".examples-dt");
   const name = document.querySelector(".name");

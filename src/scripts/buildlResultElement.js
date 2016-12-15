@@ -4,7 +4,9 @@ import { setStorage } from "./storage";
 
 export default function build(
   mathExpression,
-  { resultValue = "", resultWrapper = document.querySelector(".result-wrapper"), tag = "" } = {}) {
+  { resultValue = "",
+    tag = "",
+  } = {}) {
   const div = document.createElement("div");
   const docFrag = document.createDocumentFragment();
 
@@ -22,7 +24,7 @@ export default function build(
     // to respect tag value while storing user history
     setStorage();
   });
-  resultWrapper.appendChild(docFrag.querySelector("div").firstChild);
-  resultWrapper.scrollTop = resultWrapper.scrollHeight;
-  resultWrapper.lastChild.classList.remove("translate"); // kickoff slide animation
+  this.resultWrapper.appendChild(docFrag.querySelector("div").firstChild);
+  this.resultWrapper.scrollTop = this.resultWrapper.scrollHeight;
+  this.resultWrapper.lastChild.classList.remove("translate"); // kickoff slide animation
 }

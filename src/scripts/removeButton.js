@@ -1,9 +1,9 @@
 import { setStorage } from "./storage";
 
-export default function (resultWrapper) {
+export default function () {
   // removing .result when '.delete' is clicked;
   // using .resultWrapper instead of adding event listener to every single .delete button
-  resultWrapper.addEventListener("click", function (e) {
+  this.resultWrapper.addEventListener("click", function (e) {
     if (e.target.tagName === "BUTTON") {
       const toBeRemoved = e.target.parentNode;
 

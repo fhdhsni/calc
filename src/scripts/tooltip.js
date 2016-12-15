@@ -1,6 +1,6 @@
 export default function () {
   const keys = document.querySelectorAll(".right-keys .need-tooltip");
-  const nthRoot = document.querySelector(".nth-root");
+  const nthRoot = this.nthRoot;
 
   nthRoot.addEventListener("mouseover", function () {
     setTimeout(() => {
