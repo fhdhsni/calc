@@ -27,6 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
       this.mathHelp = document.querySelector(".math-help");
       this.helpWrapper = document.querySelector(".help-wrapper");
       this.inputWrapper = document.querySelector(".input-wrapper");
+      this.syntaxDT = document.querySelector(".syntax-dt");
+      this.examplesDT = document.querySelector(".examples-dt");
+      this.name = document.querySelector(".name");
+      this.category = document.querySelector(".category");
+      this.description = document.querySelector(".description");
+
 
       useStorage.call(this);
       addEventsForSameContentKeys.call(this);

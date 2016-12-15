@@ -7,6 +7,7 @@ import format from "./format";
 import evt from "./buildCustomEvent";
 
 export default function evalKeyFunction() {
+  closeHelp.call(this);
   this.evalKey.addEventListener("click", () => {
     const mathExpression = this.input.value.trim();
 
@@ -19,9 +20,10 @@ export default function evalKeyFunction() {
       } else {
         const result = math.eval(mathExpression);
 
-        showHelp(result.doc);
+        showHelp.call(this, result.doc);
         this.helpWrapper.classList.add("on-help");
-        closeHelp.call(this);
+        this.helpWrapper.tabIndex = "-1";  // to make it focusable
+        this.helpWrapper.focus();
       }
     }
   });
