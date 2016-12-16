@@ -1,0 +1,22 @@
+.browser-stack {
+    display: none;
+
+    @media (min-width: $medium-breakpoint) {
+        background-color: $white;
+        background-image: url('browserStack-wide.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: block;
+        height: 42px;
+        position: absolute;
+        right: -3.5em;
+        top: .5em;
+        transform: rotate(45deg) translateX(1.7em);
+        width: 240px;
+    }
+
+    @media (min-width: $larg-breakpoint) {
+        top: 2em;
+        transform: rotate(45deg) translateX(0);
+    }
+}

@@ -4,17 +4,22 @@ header {
     width: 100%;
 }
 
+%padding {
+    border: 0;
+    padding: 1em 2em;
+}
+
 .header-input {
+    @extend %padding;
     background-color: $blue;
     border: 0;
     color: $white;
+    margin: auto;
     text-align: center;
     width: 50%;
 }
 
-
-.help,
-.memory {
-    border: 0;
-    padding: 1em 2em;
+.help {
+    @extend %padding;
+    position: absolute;
 }
