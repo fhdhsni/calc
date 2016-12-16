@@ -1,7 +1,8 @@
 /* eslint no-param-reassign: ["error", { "props": false }]*/
+// import math from "./math.min";
+import math from "mathjs";
 import showHelp from "./showHelp";
 import closeHelp from "./closeHelp";
-import math from "./math.min";
 import buildResultElement from "./buildlResultElement";
 import format from "./format";
 import evt from "./buildCustomEvent";
