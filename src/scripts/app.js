@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
       this.category = document.querySelector(".category");
       this.description = document.querySelector(".description");
 
+      this.concatToValue = concatToValue;
+
 
       useStorage.call(this);
       addEventsForSameContentKeys.call(this);
