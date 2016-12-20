@@ -16,12 +16,11 @@ module.exports = {
   //   mathjs: "math",
   // },
   module: {
-    // noParse: ["src/scripts/math.min.js"],
     loaders: [
       {
         test: /\.js$/,
         // exclude: /node_modules/,
-        include: /scripts/,
+        include: [/scripts/, /test/],
         loaders: [
           "babel",
           "eslint",

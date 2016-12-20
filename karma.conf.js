@@ -13,15 +13,15 @@ module.exports = function (config) {
     reporters: ["mocha"],
     files: [
       // all files ending in "_test"
-      { pattern: "test/*_test.js", watched: false },
-      { pattern: "test/**/*_test.js", watched: false },
+      { pattern: "test/*test.js", watched: false },
+      { pattern: "test/**/*test.js", watched: false },
       // each file acts as entry point for the webpack configuration
     ],
     frameworks: ["mocha"],
     preprocessors: {
       // add webpack as preprocessor
-      "test/*_test.js": ["webpack"],
-      "test/**/*_test.js": ["webpack"],
+      "test/*test.js": ["webpack"],
+      "test/**/*test.js": ["webpack"],
     },
     webpack: webpackConfig,
     webpackMiddleware: {
