@@ -2,7 +2,7 @@ import { setStorage } from "./storage";
 
 const evt = document.createEvent("Event");
 
-evt.initEvent("callStorageFunciton", true, true);
-document.addEventListener("callStorageFunciton", () => setStorage());
+evt.initEvent("callStorageFunction", true, true);
+document.addEventListener("callStorageFunction", () => setStorage());
 
 export default evt;
