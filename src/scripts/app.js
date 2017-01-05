@@ -1,4 +1,5 @@
 /* eslint-disable no-debugger, no-restricted-syntax */
+import math from "mathjs";
 import concatToValue from "./concatToValue";
 import addEventsForSameContentKeys from "./addEventsForSameContentKeys";
 import evalKeyFunction from "./evalKeyFunction";
@@ -8,6 +9,11 @@ import { useStorage } from "./storage";
 import filterByTag from "./filterByTag";
 import tooltip from "./tooltip";
 import "../styles/main.scss";
+import closeHelp from "./closeHelp";
+import showHelp from "./showHelp";
+import buildResultElement from "./buildlResultElement";
+import format from "./format";
+import buildCustomEvent from "./buildCustomEvent";
 
 document.addEventListener("DOMContentLoaded", () => {
   class App {
@@ -34,7 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
       this.description = document.querySelector(".description");
 
       this.concatToValue = concatToValue;
-
+      this.closeHelp = closeHelp;
+      this.showHelp = showHelp;
+      this.buildResultElement = buildResultElement;
+      this.format = format;
+      this.math = math;
+      this.buildCustomEvent = buildCustomEvent;
 
       useStorage.call(this);
       addEventsForSameContentKeys.call(this);
