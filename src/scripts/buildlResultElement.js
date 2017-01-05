@@ -2,11 +2,7 @@
 /* eslint no-param-reassign: ["error", { "props": false }]*/
 import { setStorage } from "./storage";
 
-export default function build(
-  mathExpression,
-  { resultValue = "",
-    tag = "",
-  } = {}) {
+export default function build(mathExpression, { resultValue = "", tag = "" } = {}) {
   const div = document.createElement("div");
   const docFrag = document.createDocumentFragment();
 

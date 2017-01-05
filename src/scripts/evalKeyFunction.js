@@ -10,7 +10,7 @@ export default function evalKeyFunction() {
         const resultValue = this.format(this.math.format, this.math.eval(mathExpression));
 
         this.buildResultElement(mathExpression, { resultValue });
-        document.dispatchEvent(this.buildCustomEvent);
+        document.dispatchEvent(this.buildCustomEvent); // this.buildCustomEvent is an Event
       } else {
         const result = this.math.eval(mathExpression);
 
