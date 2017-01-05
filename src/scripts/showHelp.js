@@ -1,5 +1,4 @@
 export default function showHelp(helpObj) {
-  console.log(helpObj);
   this.name.textContent = helpObj.name;
   this.category.textContent = helpObj.category;
   this.description.textContent = helpObj.description;

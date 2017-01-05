@@ -4,6 +4,7 @@ import concatToValue from "./concatToValue";
 import addEventsForSameContentKeys from "./addEventsForSameContentKeys";
 import evalKeyFunction from "./evalKeyFunction";
 import removeButton from "./removeButton";
+import removeHelpElements from "./removeHelpElements";
 import toggleKeyEvent from "./toggleKeyEvent";
 import { useStorage } from "./storage";
 import filterByTag from "./filterByTag";
@@ -46,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
       this.format = format;
       this.math = math;
       this.buildCustomEvent = buildCustomEvent;
+      this.removeHelpElements = removeHelpElements;
 
       useStorage.call(this);
       addEventsForSameContentKeys.call(this);

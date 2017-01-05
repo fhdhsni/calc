@@ -1,11 +1,10 @@
-  /* eslint-disable no-param-reassign */
-import removeHelpElements from "./removeHelpElements";
+/* eslint-disable no-param-reassign */
 
 export default function closeHelp() {
   function closeHelpElement(evt) {
     let condition = true;
 
-    if (evt.type === "click") {
+    if (evt.type === "click") { // where did this click happen?
       condition = evt.target !== this.mathHelp &&
         evt.target !== this.evalKey &&
         evt.target.parentNode !== this.mathHelp;
@@ -13,7 +12,7 @@ export default function closeHelp() {
 
     if (condition) {
       this.helpWrapper.classList.remove("on-help");
-      removeHelpElements();     //  remove stuff from previous showed help
+      this.removeHelpElements();     //  remove stuff from previous showed help
     }
   }
   this.helpWrapper.addEventListener("click", closeHelpElement.bind(this));
