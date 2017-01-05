@@ -9,30 +9,26 @@ webpackConfig.entry = {};
 // Karma configuration
 module.exports = function (config) {
   config.set({
-    // ... normal karma configuration
+    browsers: ["PhantomJS"],
     reporters: ["mocha"],
     files: [
-      // all files ending in "_test"
       { pattern: "test/*test.js", watched: false },
       { pattern: "test/**/*test.js", watched: false },
-      // each file acts as entry point for the webpack configuration
     ],
     frameworks: ["mocha"],
     preprocessors: {
-      // add webpack as preprocessor
       "test/*test.js": ["webpack"],
       "test/**/*test.js": ["webpack"],
     },
     webpack: webpackConfig,
     webpackMiddleware: {
-      // webpack-dev-middleware configuration
-      // i. e.
       stats: "errors-only",
     },
     plugins: [
       require("karma-webpack"),
       require("karma-mocha"),
       require("karma-mocha-reporter"),
+      "karma-phantomjs-launcher",
     ],
   });
 };
