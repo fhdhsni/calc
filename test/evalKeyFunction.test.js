@@ -4,14 +4,12 @@ import { assert } from "chai";
 import evalKeyFunction from "../src/scripts/evalKeyFunction";
 
 describe("evalKeyFunction()", function () {
-  it("should read this.input.value and take appropriate action", function (done) {
-    this.closeHelp = function () {};
+  it("should read this.input.value and take appropriate action", function () {
     this.format = function () {};
     this.buildCustomEvent = function () {};
     this.buildResultElement = function () {};
     this.showHelp = function () {};
 
-    const closeHelp = sinon.spy(this, "closeHelp");
     const format = sinon.spy(this, "format");
     const buildResultElement = sinon.spy(this, "buildResultElement");
     const showHelp = sinon.spy(this, "showHelp");
@@ -31,7 +29,6 @@ describe("evalKeyFunction()", function () {
     this.evalKey.click();
     this.input.value = "help(cos)";
     this.evalKey.click();
-    sinon.assert.calledOnce(closeHelp);
     sinon.assert.calledOnce(format);
     sinon.assert.calledOnce(buildResultElement);
     sinon.assert.calledOnce(showHelp);
@@ -40,6 +37,5 @@ describe("evalKeyFunction()", function () {
            "helpWrapper doesn't have on-help class");
     assert.equal(this.helpWrapper.tabIndex, -1, "helpWrapper.tabIndex isn't -1");
     sinon.assert.calledOnce(this.helpWrapper.focus);
-    done();
   });
 });

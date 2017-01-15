@@ -14,7 +14,7 @@ describe("buildlResultElement", function () {
                  "resultWrapper doesn't have any children");
     assert.equal(this.resultWrapper.firstChild.children.length,
                  3,
-                 "added result element should have 3 childrens");
+                 "added result element should have 3 children");
     assert.equal(this.resultWrapper.querySelector(".math-expression").textContent.replace(/\s*/gi, ""),
                  "2+2=4",
                  "You fucked up.");

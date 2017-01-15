@@ -1,7 +1,6 @@
 /* eslint no-param-reassign: ["error", { "props": false }]*/
 
 export default function evalKeyFunction() {
-  this.closeHelp();
   this.evalKey.addEventListener("click", () => {
     const mathExpression = this.input.value.trim();
 

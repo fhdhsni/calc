@@ -7,7 +7,7 @@ describe("concatToValue(el, str)", () => {
     const str = "bar";
     const postFunctionCall = preFunctionCall + str;
     const el = {
-      value: "foo",
+      value: preFunctionCall,
     };
 
     concatToValue(el, str);

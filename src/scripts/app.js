@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
       useStorage.call(this);
       addEventsForSameContentKeys.call(this);
       evalKeyFunction.call(this);
+      this.closeHelp();
       removeButton.call(this);
       toggleKeyEvent.call(this);
       filterByTag.call(this);
