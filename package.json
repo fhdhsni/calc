@@ -7,12 +7,11 @@
   },
   "scripts": {
     "w": "webpack  --devtool false -p",
-    "ws": "webpack-dev-server --host 192.168.1.102",
+    "ws": "webpack-dev-server --host 192.168.1.101",
     "k:start": "karma start",
     "k:run": "karma run",
-    "k:stop": "karma start",
-    "mocha": "mocha",
-    "flow": "flow; test $? -eq 0 -o $? -eq 2"
+    "k:stop": "karma stop",
+    "mocha": "mocha"
   },
   "author": "Farhad hsni <farhad.hsni@gmail.com>",
   "license": "MIT",
