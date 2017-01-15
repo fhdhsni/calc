@@ -1,0 +1,21 @@
+* IN-PROGRESS [#A] [6/16] write test for following scripts
+- [X] addEventsForSameContentKeys.js
+- [X] buildlResultElement.js
+- [X] closeHelp.js
+- [X] concatToValue.js
+- [X] evalKeyFunction.js
+- [X] buildCustomEvent.js
+- [ ] filterByTag.js
+- [ ] format.js
+- [ ] math.min.js
+- [ ] removeButton.js
+- [ ] removeHelpElements.js
+- [ ] showHelp.js
+- [ ] storage.js
+- [ ] toggleKeyEvent.js
+- [ ] tooltip.js
+- [ ] app.js
+
+* Miscellaneous
+- Add placeholder to input 
+ 
