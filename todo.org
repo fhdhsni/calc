@@ -1,11 +1,11 @@
-* IN-PROGRESS [#A] [6/16] write test for following scripts
+* IN-PROGRESS [#A] [7/16] write test for following scripts
 - [X] addEventsForSameContentKeys.js
 - [X] buildlResultElement.js
 - [X] closeHelp.js
 - [X] concatToValue.js
 - [X] evalKeyFunction.js
 - [X] buildCustomEvent.js
-- [ ] filterByTag.js
+- [X] filterByTag.js
 - [ ] format.js
 - [ ] math.min.js
 - [ ] removeButton.js
