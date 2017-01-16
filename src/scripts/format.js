@@ -1,16 +1,20 @@
 export default function format(mathFormat, ans) {
   const result = mathFormat(ans, { notation: "fixed", precision: 4 });
-  let nonNumberPart;
+  let unit;
+
+  // if there's any word after numbers (e.g units)
   let numberPart = result.replace(/\s\w*\s*$/i, (match) => {
-    // if there's any word after numbers like units
-    nonNumberPart = match;
+    unit = match;
 
     return "";
   });
 
-  numberPart = numberPart.replace(/0+$/, "").replace(/\.$/, ""); // removing extra zeros at the end
-  if (nonNumberPart !== undefined) { // in case there wasn't any unit/word
-    return `${numberPart}${nonNumberPart}`;
+  numberPart = numberPart.replace(/\.0*$/, ""); // extra zeros at the end
+  if (numberPart.indexOf(".") !== -1) {         // if there's decimal point
+    numberPart = numberPart.replace(/0+$/, ""); // remove zeros at the end
+  }
+  if (unit !== undefined) {
+    return `${numberPart}${unit}`;
   }
 
   return numberPart;

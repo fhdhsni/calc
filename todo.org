@@ -1,4 +1,4 @@
-* IN-PROGRESS [#A] [7/16] write test for following scripts
+* IN-PROGRESS [#A] [8/16] write test for following scripts
 - [X] addEventsForSameContentKeys.js
 - [X] buildlResultElement.js
 - [X] closeHelp.js
@@ -6,8 +6,7 @@
 - [X] evalKeyFunction.js
 - [X] buildCustomEvent.js
 - [X] filterByTag.js
-- [ ] format.js
-- [ ] math.min.js
+- [X] format.js
 - [ ] removeButton.js
 - [ ] removeHelpElements.js
 - [ ] showHelp.js
@@ -18,4 +17,3 @@
 
 * Miscellaneous
 - Add placeholder to input 
- 
