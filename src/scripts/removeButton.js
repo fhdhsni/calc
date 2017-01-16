@@ -7,11 +7,11 @@ export default function () {
     if (e.target.tagName === "BUTTON") {
       const toBeRemoved = e.target.parentNode;
 
-      toBeRemoved.classList.add("translate"); // translate animation
-      setTimeout(() => {         // making enough time for translate animation
+      toBeRemoved.addEventListener("transitionend", () => {
         this.removeChild(toBeRemoved);
         setStorage();
-      }, 300);
+      });
+      toBeRemoved.classList.add("translate"); // translate animation
     }
   });
 }
