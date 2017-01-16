@@ -11,7 +11,8 @@
     "k:start": "karma start",
     "k:run": "karma run",
     "k:stop": "karma stop",
-    "mocha": "mocha"
+    "mocha": "mocha ./test/*sel.js",
+    "test": "mocha ./test/*sel.js && yarn run k:run"
   },
   "author": "Farhad hsni <farhad.hsni@gmail.com>",
   "license": "MIT",
