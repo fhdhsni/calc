@@ -9,7 +9,7 @@ webpackConfig.entry = {};
 // Karma configuration
 module.exports = function (config) {
   config.set({
-    browsers: ["PhantomJS"],
+    // browsers: ["PhantomJS"],
     reporters: ["mocha"],
     files: [
       { pattern: "test/*test.js", watched: false },

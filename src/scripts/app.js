@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       this.math = math;
       this.buildCustomEvent = buildCustomEvent;
       this.removeHelpElements = removeHelpElements;
+      this.filterByTag = filterByTag;
 
       useStorage.call(this);
       addEventsForSameContentKeys.call(this);
@@ -55,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       this.closeHelp();
       removeButton.call(this);
       toggleKeyEvent.call(this);
-      filterByTag.call(this);
+      this.filterByTag();
       tooltip.call(this);
 
       this.multiplication.addEventListener("click", () => {

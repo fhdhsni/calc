@@ -1,6 +1,6 @@
 /* eslint-disable prefer-arrow-callback */
-import evt from "../src/scripts/buildCustomEvent";
 import { assert } from "chai";
+import evt from "../src/scripts/buildCustomEvent";
 
 describe("buildCustomEvent", function () {
   it("should make a callStorageFunction Event and return it", function () {
