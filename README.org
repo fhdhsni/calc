@@ -1,0 +1,3 @@
+#+CAPTION: travis build status
+#+NAME: build status
+[[file:https://travis-ci.org/fhdhsni/calc.svg?branch=master]]

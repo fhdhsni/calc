@@ -14,7 +14,7 @@ test.describe("filterByTag", function () {
           .build();
     const By = webdriver.By;
 
-    driver.get("http://192.168.1.101:8080/");
+    // driver.get("http://192.168.1.101:8080/");
     driver.executeScript(function () {
       var tag = "foo";
 
