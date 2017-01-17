@@ -1,4 +1,4 @@
-*** IN-PROGRESS [#A] [11/15] write test for following scripts
+*** IN-PROGRESS [#A] [12/15] write test for following scripts
 - [X] addEventsForSameContentKeys.js
 - [X] buildlResultElement.js
 - [X] closeHelp.js
@@ -10,7 +10,7 @@
 - [X] removeButton.js
 - [X] removeHelpElements.js
 - [X] showHelp.js
-- [ ] storage.js
+- [X] storage.js
 - [ ] toggleKeyEvent.js
 - [ ] tooltip.js
 - [ ] app.js
