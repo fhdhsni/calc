@@ -1,4 +1,4 @@
-* IN-PROGRESS [#A] [9/15] write test for following scripts
+*** IN-PROGRESS [#A] [10/15] write test for following scripts
 - [X] addEventsForSameContentKeys.js
 - [X] buildlResultElement.js
 - [X] closeHelp.js
@@ -8,12 +8,13 @@
 - [X] filterByTag.js
 - [X] format.js
 - [X] removeButton.js
-- [ ] removeHelpElements.js
+- [X] removeHelpElements.js
 - [ ] showHelp.js
 - [ ] storage.js
 - [ ] toggleKeyEvent.js
 - [ ] tooltip.js
 - [ ] app.js
 
-* Miscellaneous
-- Add placeholder to input 
+*** Miscellaneous
+- Add placeholder to input
+- Fix the help box problem in 1366x768 resolution, it is not completely on screen frame.
