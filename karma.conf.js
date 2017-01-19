@@ -39,7 +39,9 @@ const configuration = {
     "karma-chrome-launcher",
   ],
 };
-
+if (process.env.USER === "farhad") {
+  process.env.CHROME_BIN = "chromium";
+}
 if (process.env.TRAVIS) {
   configuration.browsers = ["Chrome_travis_ci"];
 }
