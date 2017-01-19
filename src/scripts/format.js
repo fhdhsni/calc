@@ -3,7 +3,7 @@ export default function format(mathFormat, ans) {
   let unit;
 
   // if there's any word after numbers (e.g units)
-  let numberPart = result.replace(/\s\w*\s*$/i, (match) => {
+  let numberPart = result.replace(/[^0-9.]+$/i, (match) => {
     unit = match;
 
     return "";
