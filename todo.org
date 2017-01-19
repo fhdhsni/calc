@@ -1,4 +1,4 @@
-*** IN-PROGRESS [#A] [14/15] write test for following scripts
+*** IN-PROGRESS [#A] [15/16] write test for following scripts
 - [X] addEventsForSameContentKeys.js
 - [X] buildlResultElement.js
 - [X] closeHelp.js
@@ -13,8 +13,10 @@
 - [X] storage.js
 - [X] toggleKeyEvent.js
 - [X] tooltip.js
+- [X] backspace.js
 - [ ] app.js
 
 *** Miscellaneous
 - Add placeholder to input
 - Fix the help box problem in 1366x768 resolution, it is not completely on screen frame.
+- change random to rnd (random doen't fit)

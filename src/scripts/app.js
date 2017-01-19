@@ -15,6 +15,7 @@ import buildResultElement from "./buildlResultElement";
 import format from "./format";
 import buildCustomEvent from "./buildCustomEvent";
 import registerSW from "./registerSW";
+import backspace from "./backspace";
 
 document.addEventListener("DOMContentLoaded", () => {
   class App {
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
       this.name = document.querySelector(".name");
       this.category = document.querySelector(".category");
       this.description = document.querySelector(".description");
+      this.backspaceKey = document.getElementById("backspace");
 
       this.concatToValue = concatToValue;
       this.closeHelp = closeHelp;
@@ -49,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
       this.buildCustomEvent = buildCustomEvent;
       this.removeHelpElements = removeHelpElements;
       this.filterByTag = filterByTag;
+      this.backspace = backspace;
 
       useStorage.call(this);
       addEventsForSameContentKeys.call(this);
@@ -58,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
       toggleKeyEvent.call(this);
       this.filterByTag();
       tooltip.call(this);
+      this.backspace();
 
       this.multiplication.addEventListener("click", () => {
         concatToValue(this.input, "*");
