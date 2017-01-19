@@ -7,7 +7,6 @@ module.exports = {
   context: path.join(__dirname, "src"),
   entry: {
     app: "./scripts/app.js",
-    // sw: "./scripts/sw.js",
   },
   output: {
     path: path.join(__dirname, "dist"),

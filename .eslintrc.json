@@ -1,18 +1,14 @@
 {
   "extends": [
-    "plugin:flowtype/recommended",
     "airbnb-base"
   ],
-  "plugins": [
-    "flowtype"
-  ],
-  "env": {
-    "browser": true,
-    "node": true,
-    "es6": true,
-    "jquery": true,
-    "mocha": true
-  },
+"env": {
+  "browser": true,
+  "node": true,
+  "es6": true,
+  "jquery": true,
+  "mocha": true
+},
   "rules": {
     "quotes": ["error", "double"],
     "newline-after-var": "error",

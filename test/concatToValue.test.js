@@ -1,8 +1,8 @@
 import { assert } from "chai";
 import concatToValue from "../src/scripts/concatToValue";
 
-describe("concatToValue(el, str)", () => {
-  it("it concats the str to el.value", () => {
+describe("concatToValue", () => {
+  it("should concat a given str to value of element passed to it", () => {
     const preFunctionCall = "foo";
     const str = "bar";
     const postFunctionCall = preFunctionCall + str;

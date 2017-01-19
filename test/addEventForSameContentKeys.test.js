@@ -2,7 +2,7 @@
 import sinon from "sinon";
 import addEventsForSameContentKeys from "../src/scripts/addEventsForSameContentKeys";
 
-describe("addEventsForSameContentKeys()", function () {
+describe("addEventsForSameContentKeys", function () {
   it("should loop over sameText array-like and attach click event on its element", function () {
     const content = "sqrt";
 

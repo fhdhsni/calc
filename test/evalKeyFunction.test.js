@@ -3,7 +3,7 @@ import sinon from "sinon";
 import { assert } from "chai";
 import evalKeyFunction from "../src/scripts/evalKeyFunction";
 
-describe("evalKeyFunction()", function () {
+describe("evalKeyFunction", function () {
   it("should read this.input.value and take appropriate action", function () {
     this.format = function () {};
     this.buildCustomEvent = function () {};
