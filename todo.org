@@ -14,9 +14,10 @@
 - [X] toggleKeyEvent.js
 - [X] tooltip.js
 - [X] backspace.js
+- [ ] registerSW.js
 - [ ] app.js
 
 *** Miscellaneous
-- Add placeholder to input
+- [X] Add placeholder to input
+- [X] change random to rnd (random doen't fit)
 - Fix the help box problem in 1366x768 resolution, it is not completely on screen frame.
-- change random to rnd (random doen't fit)
