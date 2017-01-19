@@ -1,4 +1,3 @@
-/* eslint-disable no-debugger, no-restricted-syntax */
 import math from "mathjs";
 import concatToValue from "./concatToValue";
 import addEventsForSameContentKeys from "./addEventsForSameContentKeys";
@@ -15,6 +14,7 @@ import showHelp from "./showHelp";
 import buildResultElement from "./buildlResultElement";
 import format from "./format";
 import buildCustomEvent from "./buildCustomEvent";
+import registerSW from "./registerSW";
 
 document.addEventListener("DOMContentLoaded", () => {
   class App {
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
 
-      // making input respond to Enter key (doesn't on IE though)
+      // making input respond to Enter key (doesn't work on IE though)
       this.input.addEventListener("keyup", (evt) => {
         if (evt.key !== undefined) {
           if (evt.key === "Enter") {
@@ -96,4 +96,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   /* eslint-disable no-new */
   new App();
+  registerSW();
 });

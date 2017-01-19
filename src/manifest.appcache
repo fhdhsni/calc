@@ -1,0 +1,10 @@
+CACHE MANIFEST
+
+CACHE:
+/
+index.html
+app.js
+/favicon.ico
+
+NETWORK:
+*
