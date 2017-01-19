@@ -1,6 +1,22 @@
+html,
+body,
+header,
+main,
+div,
+input,
+button,
+dl,
+dd,
+dt,
+option {
+    font-family: monospace;
+    // Gee I don't know why font
+    // inheritance doesn't work, fuckit
+    // ¯\_(ツ)_/¯
+}
+
 body {
     @include ms-respond(font-size, 1);
-    font-family: Ubuntu;
 }
 
 .nth-root {
@@ -9,7 +25,4 @@ body {
     background-position: 60% 50%;
     // overflow: hidden;
     text-indent: -9999px;
-}
-dd {
-    font-family: monospace;
 }
