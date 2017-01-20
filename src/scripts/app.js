@@ -24,6 +24,7 @@ import appendUnits from "./appendUnits";
 import removeUnits from "./removeUnits";
 import unitKeyEval from "./unitEvalKey";
 import createUnitMarkup from "./createUnitMarkup";
+import sidebar from "./sidebar";
 
 document.addEventListener("DOMContentLoaded", () => {
   class App {
@@ -54,6 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
       this.lengthKey = document.getElementById("length");
       this.volumeKey = document.getElementById("volume");
       this.unitContainer = document.querySelector(".unit-container");
+      this.sidebarEl = document.querySelector(".side-bar");
+      this.convertor = document.querySelector(".convertor");
 
       this.concatToValue = concatToValue;
       this.closeHelp = closeHelp;
@@ -73,6 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
       this.removeUnits = removeUnits;
       this.unitKeyEval = unitKeyEval;
       this.createUnitMarkup = createUnitMarkup;
+      this.sidebar = sidebar;
 
       useStorage.call(this);
       addEventsForSameContentKeys.call(this);
@@ -88,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
       this.length();
       this.mass();
       this.volume();
+      this.sidebar();
 
       this.multiplication.addEventListener("click", () => {
         concatToValue(this.input, "*");

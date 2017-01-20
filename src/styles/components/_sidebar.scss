@@ -1,0 +1,56 @@
+.side-bar {
+    background-color: rgba($blue, .7);
+    box-shadow: 5px 0 10px rgba($dark-grey, .2);
+    height: 100%;
+    left: 0;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    transform: translateX(-103%);
+    transition: transform .3s;
+    width: 40%;
+    will-change: transform;
+
+    @media (min-width: $medium-breakpoint) and (max-width: $larg-breakpoint - 1){
+        width: 30%;
+    }
+
+    @media (min-width: $larg-breakpoint) {
+        width: 20%;
+    }
+
+    &.showup {
+        transform: translateX(0%);
+    }
+
+    ul {
+        list-style: none;
+        margin: 1em 0 0;
+        padding: 0;
+    }
+
+    li {
+        color: $white;
+        padding: .9em 1.5em;
+
+        &:hover {
+            background-color: rgba($bright-yellow, .9);
+            color: $dark-grey;
+            font-weight: bold;
+        }
+    }
+}
+
+.bg {
+    background-color: rgba($dark-grey, .6);
+    display: none;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+
+    &.show {
+        display: block;
+    }
+}
