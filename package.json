@@ -7,7 +7,7 @@
   },
   "scripts": {
     "w": "webpack --devtool false -p",
-    "ws": "webpack-dev-server --host 192.168.1.101",
+    "ws": "webpack-dev-server --host 192.168.1.100",
     "wsl": "webpack-dev-server",
     "k:start": "karma start",
     "k:run": "karma run",

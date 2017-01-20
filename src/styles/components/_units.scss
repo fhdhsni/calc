@@ -1,0 +1,75 @@
+.unit-container {
+    background-color: rgba($dark-grey, .6);
+    bottom: 0;
+    display: none;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    div {
+        background-color: $blue;
+        display: flex;
+        justify-content: center;
+        left: 50%;
+        padding: 1em;
+        position: absolute;
+        top: 20%;
+        transform: translateX(-50%);
+        width: 70%;
+        z-index: 3;
+
+        * {
+            flex: 1;
+        }
+    }
+}
+
+.in {
+    align-items: center;
+    background-color: $light-grey;
+    color: $dark-grey;
+    display: flex;
+    font-size: 1.2em;
+    font-weight: bold;
+    justify-content: center;
+    max-width: 2em;
+}
+
+.unit-evaluate {
+    background-color: $light-grey;
+    border: 3px $bright-yellow solid;
+    margin-left: 1em;
+    padding: 1em .5em;
+
+    &:active {
+        background-color: $bright-yellow;
+    }
+}
+
+[type=number] {                 // <input type="number" class="number"/>
+    min-width: 3em;
+    text-align: center;
+}
+
+[name=units] {                  // <select name="units">
+    background-color: $light-grey;
+    border: 0;
+    font-family: monospace;
+    outline: none;
+    padding: .5em;
+    text-align: center;
+    text-align-last: center;
+    width: 5em;
+
+    &:hover {
+        background-color: darken($light-grey, 5%);
+        cursor: pointer;
+    }
+
+    option {
+        text-align: center;
+    }
+}

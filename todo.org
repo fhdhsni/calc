@@ -15,9 +15,15 @@
 - [X] tooltip.js
 - [X] backspace.js
 - [ ] registerSW.js
+- [ ] appendUnits.js
+- [ ] removeUnits.js
+- [ ] temperature.js
+- [ ] unitEvalKey.js
 - [ ] app.js
 
 *** Miscellaneous
 - [X] Add placeholder to input
-- [X] change random to rnd (random doen't fit)
-- Fix the help box problem in 1366x768 resolution, it is not completely on screen frame.
+- [X] Change random to rnd (random doesn't fit)
+- [X] Fix the help box problem in 1366x768 resolution, it is not completely on screen frame.
+- [X] When there're too many results firefox pushes the the keyboad down instead of showing an scroll bar 
+- [ ] Highlight keys on hover for a little bit of feedback

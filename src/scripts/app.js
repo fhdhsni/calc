@@ -16,6 +16,14 @@ import format from "./format";
 import buildCustomEvent from "./buildCustomEvent";
 import registerSW from "./registerSW";
 import backspace from "./backspace";
+import temperature from "./temperature";
+import mass from "./mass";
+import length from "./length";
+import volume from "./volume";
+import appendUnits from "./appendUnits";
+import removeUnits from "./removeUnits";
+import unitKeyEval from "./unitEvalKey";
+import createUnitMarkup from "./createUnitMarkup";
 
 document.addEventListener("DOMContentLoaded", () => {
   class App {
@@ -41,6 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
       this.category = document.querySelector(".category");
       this.description = document.querySelector(".description");
       this.backspaceKey = document.getElementById("backspace");
+      this.temperatureKey = document.getElementById("temperature");
+      this.massKey = document.getElementById("mass");
+      this.lengthKey = document.getElementById("length");
+      this.volumeKey = document.getElementById("volume");
+      this.unitContainer = document.querySelector(".unit-container");
 
       this.concatToValue = concatToValue;
       this.closeHelp = closeHelp;
@@ -52,6 +65,14 @@ document.addEventListener("DOMContentLoaded", () => {
       this.removeHelpElements = removeHelpElements;
       this.filterByTag = filterByTag;
       this.backspace = backspace;
+      this.temperature = temperature;
+      this.mass = mass;
+      this.length = length;
+      this.volume = volume;
+      this.appendUnits = appendUnits;
+      this.removeUnits = removeUnits;
+      this.unitKeyEval = unitKeyEval;
+      this.createUnitMarkup = createUnitMarkup;
 
       useStorage.call(this);
       addEventsForSameContentKeys.call(this);
@@ -62,6 +83,11 @@ document.addEventListener("DOMContentLoaded", () => {
       this.filterByTag();
       tooltip.call(this);
       this.backspace();
+      this.removeUnits();
+      this.temperature();
+      this.length();
+      this.mass();
+      this.volume();
 
       this.multiplication.addEventListener("click", () => {
         concatToValue(this.input, "*");
