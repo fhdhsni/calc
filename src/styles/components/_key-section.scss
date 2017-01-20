@@ -16,7 +16,7 @@
         justify-content: space-around;
     }
 
-    @media (min-width: $medium-breakpoint) and (max-width: $larg-breakpoint - 1){
+    @media (min-width: $medium-breakpoint) and (max-width: $larg-breakpoint - 1) {
         width: $medium-width;
     }
 
