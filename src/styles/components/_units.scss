@@ -55,7 +55,9 @@
 }
 
 [name=units] {                  // <select name="units">
-    background-color: $light-grey;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url('arrow2.svg') 90% center / 5% no-repeat $light-grey;
     border: 0;
     font-family: monospace;
     outline: none;
@@ -63,6 +65,10 @@
     text-align: center;
     text-align-last: center;
     width: 5em;
+
+    &::-ms-expand {
+        display: none;
+    }
 
     &:hover {
         background-color: darken($light-grey, 5%);
