@@ -1,4 +1,4 @@
-*** IN-PROGRESS [#A] [17/35] write test for following scripts
+*** IN-PROGRESS [#A] [18/35] write test for following scripts
     #+BEGIN_SRC sh
     scripts=$(ls ./src/scripts/ -1 | wc -l)
     tests=$(ls ./test/ | wc -l)
@@ -24,7 +24,7 @@
 - [X] toggleKeyEvent.js
 - [X] createUnitMarkup.js
 - [X] backspace.js
-- [ ] appendUnits.js
+- [X] appendUnits.js
 - [ ] unitEvalKey.js
 - [ ] removeUnits.js
 - [ ] sidebar.js
@@ -50,3 +50,4 @@
 - [X] Fix the help box problem in 1366x768 resolution, it is not completely on screen frame.
 - [X] When there're too many results firefox pushes the the keyboad down instead of showing an scroll bar 
 - [ ] Highlight keys on hover for a little bit of feedback
+- [ ] Doesn't work in Brave 

@@ -16,7 +16,7 @@ const configuration = {
   },
   // browsers: ["PhantomJS"],
   browsers: ["Chrome"],
-  reporters: ["mocha"],
+  reporters: ["dots"],
   files: [
     { pattern: "test/*test.js", watched: false },
     { pattern: "test/**/*test.js", watched: false },
@@ -39,6 +39,7 @@ const configuration = {
     "karma-chrome-launcher",
   ],
 };
+
 if (process.env.USER === "farhad") {
   process.env.CHROME_BIN = "chromium";
 }
