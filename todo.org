@@ -1,25 +1,48 @@
-*** IN-PROGRESS [#A] [15/16] write test for following scripts
+*** IN-PROGRESS [#A] [17/35] write test for following scripts
+    #+BEGIN_SRC sh
+    scripts=$(ls ./src/scripts/ -1 | wc -l)
+    tests=$(ls ./test/ | wc -l)
+    test $scripts -eq $(expr $tests - 1) && echo "I'm not sure buy hey thumbs up +1!" || echo "You dumbass haven't even reached the miniumn number of tests."
+    #+END_SRC
+
+    #+RESULTS:
+    : You dumbass haven't even reached the miniumn number of tests.
+
+- [X] filterByTag.js
+- [X] concatToValue.js
+- [X] removeHelpElements.js
 - [X] addEventsForSameContentKeys.js
+- [X] buildCustomEvent.js
 - [X] buildlResultElement.js
 - [X] closeHelp.js
-- [X] concatToValue.js
 - [X] evalKeyFunction.js
-- [X] buildCustomEvent.js
-- [X] filterByTag.js
-- [X] format.js
 - [X] removeButton.js
-- [X] removeHelpElements.js
 - [X] showHelp.js
 - [X] storage.js
-- [X] toggleKeyEvent.js
 - [X] tooltip.js
+- [X] registerSW.js
+- [X] toggleKeyEvent.js
+- [X] createUnitMarkup.js
 - [X] backspace.js
-- [ ] registerSW.js
 - [ ] appendUnits.js
-- [ ] removeUnits.js
-- [ ] temperature.js
 - [ ] unitEvalKey.js
+- [ ] removeUnits.js
+- [ ] sidebar.js
+- [ ] pressure.js
+- [ ] power.js
+- [ ] mass.js
+- [ ] liquidVolume.js
+- [ ] length.js
+- [X] format.js
+- [ ] force.js
+- [ ] energy.js
 - [ ] app.js
+- [ ] angles.js
+- [ ] addEventForUnitKeys.js
+- [ ] volume.js
+- [ ] time.js
+- [ ] temperature.js
+- [ ] surface.js
 
 *** Miscellaneous
 - [X] Add placeholder to input
