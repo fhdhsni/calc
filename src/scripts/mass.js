@@ -27,13 +27,7 @@ export default function () {
     { value: "stone",
       text: "stone" }];
   const div = this.createUnitMarkup(arrayOfUnits);
-  let firstTime = true;
 
-  this.massKey.addEventListener("click", () => {
-    this.appendUnits(div);
-    if (firstTime) {
-      this.unitKeyEval();
-      firstTime = false;
-    }
-  });
+  this.addEventForUnitKeys(div, this.massKey);
+  this.addEventForUnitKeys(div, this.sidebarMassKey);
 }

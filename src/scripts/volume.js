@@ -20,15 +20,8 @@ export default function () {
 
     { value: "tablespoon",
       text: "tablespoon" }];
-
   const div = this.createUnitMarkup(arrayOfUnits);
-  let firstTime = true;
 
-  this.volumeKey.addEventListener("click", () => {
-    this.appendUnits(div);
-    if (firstTime) {
-      this.unitKeyEval();
-      firstTime = false;
-    }
-  });
+  this.addEventForUnitKeys(div, this.volumeKey);
+  this.addEventForUnitKeys(div, this.sidebarVolumeKey);
 }

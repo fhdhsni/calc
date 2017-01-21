@@ -1,5 +1,5 @@
 export default function format(mathFormat, ans) {
-  const result = mathFormat(ans, { notation: "fixed", precision: 4 });
+  const result = mathFormat(ans, { notation: "fixed", precision: 6 });
   let unit;
 
   // if there's any word after numbers (e.g units)

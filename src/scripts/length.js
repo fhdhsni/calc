@@ -31,13 +31,7 @@ export default function () {
       text: "mil" }];
 
   const div = this.createUnitMarkup(arrayOfUnits);
-  let firstTime = true;
 
-  this.lengthKey.addEventListener("click", () => {
-    this.appendUnits(div);
-    if (firstTime) {
-      this.unitKeyEval();
-      firstTime = false;
-    }
-  });
+  this.addEventForUnitKeys(div, this.lengthKey);
+  this.addEventForUnitKeys(div, this.sidebarLengthKey);
 }

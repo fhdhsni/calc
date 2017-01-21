@@ -12,13 +12,7 @@ export default function () {
     { value: "degR",
       text: "rankine" }];
   const div = this.createUnitMarkup(arrayOfUnits);
-  let firstTime = true;
 
-  this.temperatureKey.addEventListener("click", () => {
-    this.appendUnits(div);
-    if (firstTime) {
-      this.unitKeyEval();
-      firstTime = false;
-    }
-  });
+  this.addEventForUnitKeys(div, this.temperatureKey);
+  this.addEventForUnitKeys(div, this.sidebarTemperatureKey);
 }

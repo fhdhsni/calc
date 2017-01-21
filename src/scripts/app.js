@@ -25,6 +25,15 @@ import removeUnits from "./removeUnits";
 import unitKeyEval from "./unitEvalKey";
 import createUnitMarkup from "./createUnitMarkup";
 import sidebar from "./sidebar";
+import surface from "./surface";
+import addEventForUnitKeys from "./addEventForUnitKeys";
+import liquidVolume from "./liquidVolume";
+import angles from "./angles";
+import time from "./time";
+import force from "./force";
+import energy from "./energy";
+import power from "./power";
+import pressure from "./pressure";
 
 document.addEventListener("DOMContentLoaded", () => {
   class App {
@@ -50,10 +59,26 @@ document.addEventListener("DOMContentLoaded", () => {
       this.category = document.querySelector(".category");
       this.description = document.querySelector(".description");
       this.backspaceKey = document.getElementById("backspace");
+      this.backspaceKey = document.getElementById("backspace");
+      this.bg = document.querySelector(".bg");
+
       this.temperatureKey = document.getElementById("temperature");
       this.massKey = document.getElementById("mass");
       this.lengthKey = document.getElementById("length");
       this.volumeKey = document.getElementById("volume");
+      this.surfaceKey = document.getElementById("surface");
+      this.liquidKey = document.getElementById("liquid-volume");
+      this.anglesKey = document.getElementById("angles");
+      this.timeKey = document.getElementById("time");
+      this.forceKey = document.getElementById("force");
+      this.energyKey = document.getElementById("energy");
+      this.powerKey = document.getElementById("power");
+      this.pressureKey = document.getElementById("pressure");
+      this.sidebarTemperatureKey = document.getElementById("sidebar-temperature");
+      this.sidebarMassKey = document.getElementById("sidebar-mass");
+      this.sidebarLengthKey = document.getElementById("sidebar-length");
+      this.sidebarVolumeKey = document.getElementById("sidebar-volume");
+
       this.unitContainer = document.querySelector(".unit-container");
       this.sidebarEl = document.querySelector(".side-bar");
       this.convertor = document.querySelector(".convertor");
@@ -77,6 +102,15 @@ document.addEventListener("DOMContentLoaded", () => {
       this.unitKeyEval = unitKeyEval;
       this.createUnitMarkup = createUnitMarkup;
       this.sidebar = sidebar;
+      this.surface = surface;
+      this.addEventForUnitKeys = addEventForUnitKeys;
+      this.liquidVolume = liquidVolume;
+      this.angles = angles;
+      this.time = time;
+      this.force = force;
+      this.energy = energy;
+      this.power = power;
+      this.pressure = pressure;
 
       useStorage.call(this);
       addEventsForSameContentKeys.call(this);
@@ -88,11 +122,19 @@ document.addEventListener("DOMContentLoaded", () => {
       tooltip.call(this);
       this.backspace();
       this.removeUnits();
+      this.sidebar();
       this.temperature();
       this.length();
       this.mass();
       this.volume();
-      this.sidebar();
+      this.surface();
+      this.liquidVolume();
+      this.angles();
+      this.time();
+      this.force();
+      this.energy();
+      this.power();
+      this.pressure();
 
       this.multiplication.addEventListener("click", () => {
         concatToValue(this.input, "*");

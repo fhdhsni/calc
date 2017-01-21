@@ -1,16 +1,14 @@
 export default function () {
-  const bg = document.querySelector(".bg");
-
   this.convertor.addEventListener("click", () => {
     this.sidebarEl.classList.add("showup");
-    bg.classList.add("show");
+    this.bg.classList.add("show");
   });
   document.body.addEventListener("click", (evt) => {
     const target = evt.target;
 
-    if (target === bg) {
+    if (target === this.bg) {
       this.sidebarEl.classList.remove("showup");
-      bg.classList.remove("show");
+      this.bg.classList.remove("show");
     }
   });
 }
