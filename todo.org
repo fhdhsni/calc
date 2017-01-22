@@ -1,8 +1,8 @@
-*** IN-PROGRESS [#A] [27/35] write test for following scripts
+*** IN-PROGRESS [#A] [34/35] write test for following scripts
     #+BEGIN_SRC sh
     scripts=$(ls ./src/scripts/ -1 | wc -l)
-    tests=$(ls ./test/ | wc -l)
-    test $scripts -eq $(expr $tests - 1) && echo "I'm not sure buy hey thumbs up +1!" || echo "You dumbass haven't even reached the miniumn number of tests."
+    tests=$(ls ./test/ -1 | wc -l)
+    test $scripts -lt $(expr $tests - 1) && echo "I'm not sure buy hey thumbs up +1!" || echo "You dumbass haven't even reached the miniumn number of tests."
     #+END_SRC
 
     #+RESULTS:
@@ -35,13 +35,13 @@
 - [X] mass.js
 - [X] liquidVolume.js
 - [X] length.js
-- [ ] force.js
-- [ ] energy.js
-- [ ] angles.js
-- [ ] volume.js
-- [ ] time.js
-- [ ] temperature.js
-- [ ] surface.js
+- [X] force.js
+- [X] energy.js
+- [X] angles.js
+- [X] volume.js
+- [X] time.js
+- [X] temperature.js
+- [X] surface.js
 - [ ] app.js
 
 *** Miscellaneous
@@ -50,4 +50,4 @@
 - [X] Fix the help box problem in 1366x768 resolution, it is not completely on screen frame.
 - [X] When there're too many results firefox pushes the the keyboad down instead of showing an scroll bar 
 - [ ] Highlight keys on hover for a little bit of feedback
-- [ ] Doesn't work in Brave 
+- [ ] The whole thing doesn't work in Brave 

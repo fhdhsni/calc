@@ -6,8 +6,8 @@ export default function () {
     { text: "minute(s)",
       value: "minute" },
 
-    { text: "hour",
-      value: "hours" },
+    { text: "hour(s)",
+      value: "h" },
 
     { text: "day(s)",
       value: "days" }];
