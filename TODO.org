@@ -49,6 +49,6 @@
 - [X] Change random to rnd (random doesn't fit)
 - [X] Fix the help box problem in 1366x768 resolution, it is not completely on screen frame.
 - [X] When there're too many results firefox pushes the the keyboad down instead of showing an scroll bar 
+- [X] Minify CSS
 - [ ] Highlight keys on hover for a little bit of feedback
 - [ ] The whole thing doesn't work in Brave
-- [ ] Minify CSS

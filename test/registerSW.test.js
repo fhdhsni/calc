@@ -9,7 +9,7 @@ describe("registerSW", function () {
 
       registerSW();
       sinon.assert.calledOnce(spy);
-      sinon.assert.calledWith(spy, "./sw.js");
+      sinon.assert.calledWith(spy, "/calc/sw.js");
     }
   });
 });

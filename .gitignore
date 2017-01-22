@@ -1,4 +1,3 @@
 /node_modules
 *.min.js
-./dist/index.html
 *.log

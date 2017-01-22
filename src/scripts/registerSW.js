@@ -1,6 +1,6 @@
 export default function () {
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("./sw.js").then((reg) => {
+    navigator.serviceWorker.register("/calc/sw.js").then((reg) => {
       /* eslint-disable no-param-reassign, indent */
       reg.onupdatefound = function () {
         const installingWorker = reg.installing;
