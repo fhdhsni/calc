@@ -1,6 +1,5 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const webpack = require("webpack");
 
 module.exports = {
   devtool: "source-map",
@@ -19,7 +18,6 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        // exclude: /node_modules/,
         include: [/scripts/, /test/],
         loaders: [
           "babel",
@@ -31,7 +29,7 @@ module.exports = {
         include: /styles/,
         loaders: [
           "style",
-          "css",
+          "css?minimize",
           "postcss",
           "sass",
         ],
