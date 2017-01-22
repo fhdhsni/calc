@@ -2,10 +2,10 @@
 CACHE MANIFEST
 
 CACHE:
-/app.js
-/favicon.ico
-/favicon-16x16.png
-/favicon-32x32.png
+/calc/app.js
+/calc/favicon.ico
+/calc/favicon-16x16.png
+/calc/favicon-32x32.png
 
 NETWORK:
 *

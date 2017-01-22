@@ -1,12 +1,13 @@
 const CACHE_NAME = "v1";
 const urlsToCache = [
-  "/",
-  "/app.js",
-  "/index.html",
+  "/calc",
+  "/calc/",
+  "/calc/app.js",
+  "/calc/index.html",
 ];
 
 self.addEventListener("install", event => {
-  event.waitUntil(                  // waitUntil takes a promise
+  event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => cache.addAll(urlsToCache))
   );
@@ -25,8 +26,6 @@ self.addEventListener("fetch", event => {
         return fetch(fetchRequest)
           .then((fetchResponse) => {
             if (!fetchResponse || fetchResponse.status !== 200 || fetchResponse.type !== "basic") {
-              /* in these situations we don't wan't to cache it */
-              /* 'basic' means that requests to third party assets aren't cached as well. */
               return fetchResponse;
             }
             const responseToCache = fetchResponse.clone();
