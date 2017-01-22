@@ -1,4 +1,4 @@
-*** IN-PROGRESS [#A] [21/35] write test for following scripts
+*** IN-PROGRESS [#A] [22/35] write test for following scripts
     #+BEGIN_SRC sh
     scripts=$(ls ./src/scripts/ -1 | wc -l)
     tests=$(ls ./test/ | wc -l)
@@ -28,21 +28,21 @@
 - [X] unitEvalKey.js
 - [X] removeUnits.js
 - [X] sidebar.js
+- [X] format.js
+- [X] addEventForUnitKeys.js
 - [ ] pressure.js
 - [ ] power.js
 - [ ] mass.js
 - [ ] liquidVolume.js
 - [ ] length.js
-- [X] format.js
 - [ ] force.js
 - [ ] energy.js
-- [ ] app.js
 - [ ] angles.js
-- [ ] addEventForUnitKeys.js
 - [ ] volume.js
 - [ ] time.js
 - [ ] temperature.js
 - [ ] surface.js
+- [ ] app.js
 
 *** Miscellaneous
 - [X] Add placeholder to input

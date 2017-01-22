@@ -1,6 +1,6 @@
 export default function (div, key) {
   let firstTime = true;
-  // because we don't wan't to
+  // because we don't want to run
   // addEventListener for eval key more
   // than once
 
