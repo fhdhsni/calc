@@ -1,4 +1,4 @@
-*** IN-PROGRESS [#A] [24/35] write test for following scripts
+*** IN-PROGRESS [#A] [25/35] write test for following scripts
     #+BEGIN_SRC sh
     scripts=$(ls ./src/scripts/ -1 | wc -l)
     tests=$(ls ./test/ | wc -l)
@@ -32,7 +32,7 @@
 - [X] addEventForUnitKeys.js
 - [X] pressure.js
 - [X] power.js
-- [ ] mass.js
+- [X] mass.js
 - [ ] liquidVolume.js
 - [ ] length.js
 - [ ] force.js

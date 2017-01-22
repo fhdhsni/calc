@@ -6,6 +6,9 @@ export default function () {
     { value: "ton",
       text: "ton" },
 
+    { value: "tonne",
+      text: "tonne" },
+
     { value: "gr",
       text: "grain" },
 
