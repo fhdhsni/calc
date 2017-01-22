@@ -1,4 +1,4 @@
-*** IN-PROGRESS [#A] [18/35] write test for following scripts
+*** IN-PROGRESS [#A] [19/35] write test for following scripts
     #+BEGIN_SRC sh
     scripts=$(ls ./src/scripts/ -1 | wc -l)
     tests=$(ls ./test/ | wc -l)
@@ -25,7 +25,7 @@
 - [X] createUnitMarkup.js
 - [X] backspace.js
 - [X] appendUnits.js
-- [ ] unitEvalKey.js
+- [X] unitEvalKey.js
 - [ ] removeUnits.js
 - [ ] sidebar.js
 - [ ] pressure.js
