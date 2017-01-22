@@ -3,13 +3,8 @@ export default function () {
     this.sidebarEl.classList.add("showup");
     this.bg.classList.add("show");
   });
-  document.body.addEventListener("click", (evt) => {
-    const target = evt.target;
-
-    if (target === this.bg) {
-      this.sidebarEl.classList.remove("showup");
-      this.bg.classList.remove("show");
-    }
+  this.bg.addEventListener("click", () => {
+    this.sidebarEl.classList.remove("showup");
+    this.bg.classList.remove("show");
   });
 }
-
