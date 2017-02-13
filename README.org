@@ -1,3 +1,10 @@
+
 #+CAPTION: travis build status
 #+NAME: build status
 [[file:https://travis-ci.org/fhdhsni/calc.svg?branch=master]]
+
+Lessons learned (note to myself):
+- A# Learn BEM, Your class names have no structure (well it's a disaster). Your styles are about to explode.
+- Find a way to test on Safari.
+- Test edge cases (e.g. in this case really big numbers like 22222222222222222)
+- Test *performance* on the way not at the end.
